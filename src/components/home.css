@@ -1,0 +1,39 @@
+.flex-container{
+    display: flex;
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    padding: 10% 4%;
+    background-color: grey;
+    box-sizing: border-box;
+    
+}
+.wrapper{
+    width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+.top-left{
+    background-color: blue;
+    flex: 1;
+    height: 200px;
+    flex: 1 1 80px;
+}
+.down-left{
+    background-color: red;
+    flex: 1;
+    height: 125px;
+    flex: 1 1 80px;
+    
+}
+.right{
+    background-color: green;
+    flex: 2;
+    height: 340px;
+    flex: 1 1 80px;
+    flex-direction: row;
+
+}
