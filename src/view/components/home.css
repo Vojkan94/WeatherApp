@@ -16,28 +16,23 @@
     justify-content: space-evenly;
     
 }
-.top-left{
-    background-color: blue;
+.home-top-left{
+    background-color: lightblue;
     margin-bottom: 1.5%;
     margin-right: 1.5%;
     width: 40%;
-    height: 57%;
-    
+    height: 61%;
+    border-radius: 2px;
 }
-.down-left{
+.home-down-left{
     background-color: red;
-    
     width: 40%;
-    height: 40%;
-   
+    height: 36%;
+    border-radius: 2px;
 }
-.right{
+.home-right{
     background-color: green;
-   
     height: 100%;
     width: 58%;
-   
-    
-    
-
+    border-radius: 2px;
 }
