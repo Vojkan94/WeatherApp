@@ -1,0 +1,50 @@
+.cw-wrapper{
+    padding: 10%;
+}
+.current-temperature{
+    float: left;
+    height: 100px;
+    
+}
+.p-temperature{
+    font-size: 45px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.p-temperature > span{
+    font-size: 30px;
+    position: relative;
+    color: white;
+    top: -14px;
+    left: -10px;
+   
+}
+.p-temperature-text{
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.current-icone{
+    float: right;
+    width: 50px;
+}
+.clearFix::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.cw-update{
+    color: white;
+    width: 100%;
+    padding: 7% 10%
+}
+.cw-update >p{
+    color: white;
+    display: inline-block;
+    margin-left: 5%;
+    position: relative;
+    top: -5px;
+}

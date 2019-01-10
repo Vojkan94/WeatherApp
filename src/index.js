@@ -1,5 +1,5 @@
 // import Instructions from "../instructions";
-import Home from './components/Home';
+import Home from './view/components/Home';
 
 import React from "react";
 import ReactDOM from "react-dom";
