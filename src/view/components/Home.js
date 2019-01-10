@@ -10,7 +10,7 @@ const Home = () =>{
             <div className="wrapper">
                 <CurrentWeather/>
                 <div className="home-down-left">dsa</div>
-                <div className="home-right">dsad</div>
+                <div className="home-right"></div>
             </div>
 
         </div>
