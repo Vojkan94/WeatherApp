@@ -2,6 +2,7 @@ import React from "react";
 import './home.css';
 
 import CurrentWeather from './CurrentWeather/CurrentWeather';
+import CurrentWeatherDetails from './CurrentWeatherDetails/CurrentWeatherDetails';
 
 const Home = () =>{
 
@@ -9,13 +10,10 @@ const Home = () =>{
         <div className="flex-container">
             <div className="wrapper">
                 <CurrentWeather/>
-                <div className="home-down-left">dsa</div>
+                <CurrentWeatherDetails/>
                 <div className="home-right"></div>
             </div>
-
-        </div>
-
-        
+        </div>  
     )
 }
 

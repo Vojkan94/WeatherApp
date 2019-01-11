@@ -1,5 +1,5 @@
 .cw-wrapper{
-    padding: 10%;
+    padding: 9.5%;
 }
 .current-temperature{
     float: left;
@@ -39,7 +39,7 @@
 .cw-update{
     color: white;
     width: 100%;
-    padding: 7% 10%
+    padding: 7% 9.5%
 }
 .cw-update >p{
     color: white;

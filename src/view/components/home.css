@@ -28,7 +28,15 @@
     border-radius: 5px;
 }
 .home-down-left{
-    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-image: url('./CurrentWeatherDetails/details.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2%;
     width: 40%;
     height: 36%;
     border-radius: 5px;
