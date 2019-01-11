@@ -1,0 +1,66 @@
+.dropdown-el {
+    width: 62%;
+    position: relative;
+    display: inline-block;
+    min-height: 2em;
+    max-height: 2em;
+    overflow: hidden;
+    top: 0.5em;
+    cursor: pointer;
+    white-space: nowrap;
+    color: white;
+    outline: none;
+    border: 0.06em solid transparent;
+    border-radius: 1em;
+    transition: 0.3s all ease-in-out;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+.dropdown-el input {
+    display: none;
+}
+.dropdown-el label {
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+    padding-right: 3em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s color ease-in-out;
+}
+.dropdown-el label:nth-child(2) {
+    margin-top: 2em;
+}
+.dropdown-el input:checked + label {
+    display: block;
+    border-top: none;
+    position: absolute;
+    top: 0;
+}
+.dropdown-el input:checked + label:nth-child(2) {
+    margin-top: 0;
+    position: relative;
+}
+.dropdown-el::after {
+    content: "";
+    position: absolute;
+    right: 0.8em;
+    top: 0.9em;
+    border: 0.3em solid white;
+    border-color: white transparent transparent transparent;
+    transition: 0.4s all ease-in-out;
+}
+.dropdown-el.expanded {
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 6px 0px;
+    max-height: 15em;
+}
+.dropdown-el.expanded label:hover {
+    color: #3694d7;
+}
+.dropdown-el.expanded::after {
+    transform: rotate(-180deg);
+    top: 0.55em;
+}

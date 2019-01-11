@@ -3,7 +3,7 @@ import './home.css';
 
 import CurrentWeather from './CurrentWeather/CurrentWeather';
 import CurrentWeatherDetails from './CurrentWeatherDetails/CurrentWeatherDetails';
-
+import MainWeatherComponent from './MainWeatherComponent/MainWeatherComponent';
 const Home = () =>{
 
     return (
@@ -11,7 +11,7 @@ const Home = () =>{
             <div className="wrapper">
                 <CurrentWeather/>
                 <CurrentWeatherDetails/>
-                <div className="home-right"></div>
+                <MainWeatherComponent/>
             </div>
         </div>  
     )
