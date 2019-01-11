@@ -1,0 +1,66 @@
+.seven-days-blur{
+    width: 99.5%;
+    position: absolute;
+    right: 1px;
+    bottom: 0;
+    background-image: url('../../../assets/images/bg.jpg');
+    filter: blur(2px);
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 130px;
+}
+
+.seven-days-wrapper{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 130px;
+    max-height: 130px;
+}
+.zoom-effect{
+    
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    height: 80%;
+    transition: all .1s linear;
+    filter: brightness(85%);
+}
+.zoom-effect:hover{
+    transform: scale(1.2); 
+    filter: brightness(100%);
+}
+.day-wrapper{
+    float: left;
+    text-align: center;
+    width: 14.2%;
+    height: 20%;
+}
+.seven-days-wrapper hr{
+    filter: brightness(80%);
+    display: inline-block;
+    height: 130px;
+    position: absolute;
+    bottom: -9px;
+    border: 0.5px solid white;
+}
+
+.zoom-effect img{
+    margin-top: 10%;
+}
+.zoom-effect p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+.day-of-week{
+    font-size: 10px;
+    color: white;
+    filter: brightness(80%);
+    text-align: center;
+    position: relative;
+    top: 15px;
+}

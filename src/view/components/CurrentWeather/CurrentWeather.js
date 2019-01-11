@@ -1,6 +1,6 @@
 import React from "react";
 import './currentWeather.css';
-import icon from './sun.png';
+import sun from '../../assets/icons/sun.svg';
 // import Chart from '../chart';
 
 const CurrentWeather = () =>{
@@ -12,12 +12,12 @@ const CurrentWeather = () =>{
                             <p className="p-temperature-text">Sunny</p>
                         </div>
                         <div className="current-icone">
-                            <img width="100%" src={icon}/>
+                            <img src={sun}/>
                         </div>
                     </div>
                     <div className="cw-update">
-                    <img width="8%" src="https://cdn.iconscout.com/icon/free/png-256/refresh-470-474986.png"/>
-                     <p>Updated <b>4 mins</b> ago.</p>
+                    <img width="10%" src="https://cdn.iconscout.com/icon/free/png-256/refresh-470-474986.png"/>
+                     <p>Updated 4 mins ago.</p>
                     </div>
                
 

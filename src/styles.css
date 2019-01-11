@@ -40,5 +40,6 @@
     font-weight: bold;
 }
 *{
+    box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
 }
