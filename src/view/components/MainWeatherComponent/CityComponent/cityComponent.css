@@ -64,3 +64,13 @@
     transform: rotate(-180deg);
     top: 0.55em;
 }
+.weather-date{
+    color: white;
+    margin-left: 9%;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+.weather-date--opacity{
+    opacity: 0;
+}
