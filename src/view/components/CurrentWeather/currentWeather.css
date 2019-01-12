@@ -7,7 +7,7 @@
     
 }
 .p-temperature{
-    font-size: 45px;
+    font-size: 33px;
     color: white;
     margin: 0;
     padding: 0;
@@ -16,8 +16,8 @@
     font-size: 30px;
     position: relative;
     color: white;
-    top: -14px;
-    left: -10px;
+    top: -4px;
+    left: -7px;
    
 }
 .p-temperature-text{

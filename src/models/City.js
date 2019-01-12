@@ -1,7 +1,8 @@
 class City { 
-    constructor(name, currentTemp, sevenDaysTemp, visibility, uvIndex, humidity, dewPoint){
+    constructor(name, temperature, precipType, sevenDaysTemp, visibility, uvIndex, humidity, dewPoint){
         this.name = name;
-        this.currentTemp = currentTemp;
+        this.temperature = temperature;
+        this.precipType = precipType;
         this.sevenDaysTemp = sevenDaysTemp;
         this.visibility = visibility;
         this. uvIndex = uvIndex;

@@ -2,26 +2,23 @@ import React, {Component} from "react";
 import './currentWeather.css';
 import sun from '../../assets/icons/sun.svg';
 // import Chart from '../chart';
-import { cityService } from '../../../services/cityService';
+
 
 class CurrentWeather extends Component{
     constructor(props){
-        super(props);
-        this.state = {
-            city: null
-        }
+        super(props); 
     }
 
-    componentDidMount(){
-        cityService.fetchWeather("BG");
-    }
+    
     render (){
+        let {temperature, precipType} = this.props.city;
+        precipType = `${precipType[0].toUpperCase()}${precipType.slice(1)}`;
         return(
             <div className="home-top-left">
                         <div className="cw-wrapper clearFix"> 
                             <div className="current-temperature">
-                                <p className="p-temperature">30 <span>&deg;</span></p>
-                                <p className="p-temperature-text">Sunny</p>
+                                <p className="p-temperature">{temperature} <span>&deg;</span></p>
+                                <p className="p-temperature-text">{precipType}</p>
                             </div>
                             <div className="current-icone">
                                 <img src={sun}/>
