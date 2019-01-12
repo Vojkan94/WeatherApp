@@ -33,7 +33,7 @@ class Home extends Component {
             <div className="flex-container">
                 <div className="wrapper">
                     <CurrentWeather city={this.state.city}/>
-                    <CurrentWeatherDetails/>
+                    <CurrentWeatherDetails city={this.state.city}/>
                     <MainWeatherComponent/>
                 </div>
             </div>  
