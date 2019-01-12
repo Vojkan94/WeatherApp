@@ -14,12 +14,13 @@ class CityService{
         sevenDays.length = 7;
         const nameOfDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
         const currentDay = nameOfDays[new Date().getDay()];
+        let sortDays = [];
+        for(let i = 0, indexOfDay = nameOfDays.indexOf(currentDay) ; i < 7; i++, indexOfDay++ ){
+            sortDays.push(nameOfDays[indexOfDay])
+            indexOfDay = indexOfDay === 6 ? indexOfDay = -1 : indexOfDay;
+        }
         
-        // const sevenDaysEntities = sevenDays.map((dayTempInfo)=>{
-        //     const 
-        //     return new Day()
-        // })
-        console.log(currentDay)
+        console.log(sortDays)
         return new City(city, temperature, precipType, sevenDays, visibility, uvIndex, humidity, dewPoint);
     }
 }
