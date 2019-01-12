@@ -34,7 +34,7 @@ class Home extends Component {
                 <div className="wrapper">
                     <CurrentWeather city={this.state.city}/>
                     <CurrentWeatherDetails city={this.state.city}/>
-                    <MainWeatherComponent/>
+                    <MainWeatherComponent sevenDaysTemp={this.state.city.sevenDaysTemp}/>
                 </div>
             </div>  
         )
