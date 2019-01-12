@@ -1,5 +1,5 @@
 .cw-wrapper{
-    padding: 10%;
+    padding: 9.5%;
 }
 .current-temperature{
     float: left;
@@ -29,7 +29,13 @@
 
 .current-icone{
     float: right;
-    width: 50px;
+    width: 50%;
+}
+.current-icone > img{
+    width: 100%;   
+    position: relative;
+    top: -20px;
+    left: 20px;
 }
 .clearFix::after{
     display: block;
@@ -37,14 +43,14 @@
     clear: both;
 }
 .cw-update{
-    color: white;
     width: 100%;
-    padding: 7% 10%
+    padding: 5% 9.5%;
 }
-.cw-update >p{
-    color: white;
+.cw-update > p{
+    color: rgb(255, 255, 255);
     display: inline-block;
     margin-left: 5%;
     position: relative;
-    top: -5px;
+    top: -4px;
+    font-weight: bold;
 }

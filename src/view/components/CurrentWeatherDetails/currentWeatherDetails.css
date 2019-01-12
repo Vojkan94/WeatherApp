@@ -1,0 +1,24 @@
+.home-down-left > div{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 8%;
+}
+.cwd-details{
+   margin: 0;
+   padding: 0;
+   color: white;
+   font-size: 23px;
+}
+.home-down-left span{
+    position: relative;
+    top: -5px;
+    left: 2px;
+    font-size: 20px;
+}
+.cwd-details-text{
+    opacity: 0.5;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: white;
+}

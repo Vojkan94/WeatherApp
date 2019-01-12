@@ -4,13 +4,13 @@
     width: 800px;
     height: 600px;
     background-color: #DBEDF7;
-    box-sizing: border-box;
     
 }
 .wrapper{
-    margin:auto;
     width: 635px;
     display: flex;
+    margin: auto;
+    margin-left: 8%;
     flex-flow: column wrap;
     height: 350px;
     justify-content: space-evenly;
@@ -28,17 +28,25 @@
     border-radius: 5px;
 }
 .home-down-left{
-    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url('./CurrentWeatherDetails/details.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2%;
     width: 40%;
     height: 36%;
     border-radius: 5px;
 }
 .home-right{
+    position: relative;
     background-image: url('../assets/images/bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: 60%;
+    width: 64%;
     border-radius: 5px;
 }

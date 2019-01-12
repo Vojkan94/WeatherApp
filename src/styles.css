@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('./view/assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('./view/assets/fonts/OpenSans-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('./view/assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('./view/assets/fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url('./view/assets/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url('./view/assets/fonts/Lato-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Roboto Condensed', sans-serif;
+    src: url('./view/assets/fonts/RobotoCondensed-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Condensed', sans-serif;
+    src: url('./view/assets/fonts/RobotoCondensed-Bold.ttf');
+    font-weight: bold;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
