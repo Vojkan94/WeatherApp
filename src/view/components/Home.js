@@ -12,9 +12,11 @@ class Home extends Component {
     constructor(props){
         super(props);
         this.state = {
-            city: null
+            city: null,
+            cityName: "BG"
         }
         // this.myfetch = this.myfetch.bind(this);
+
     }
     componentDidMount(){
        this.myfetch();
@@ -27,6 +29,10 @@ class Home extends Component {
         })
     }
 
+    changeCity(){
+        console.log("klick")
+    }
+
     render (){
         if(!this.state.city) { return null; }
         return (
@@ -34,7 +40,7 @@ class Home extends Component {
                 <div className="wrapper">
                     <CurrentWeather city={this.state.city}/>
                     <CurrentWeatherDetails city={this.state.city}/>
-                    <MainWeatherComponent sevenDaysTemp={this.state.city.sevenDaysTemp}/>
+                    <MainWeatherComponent changeCity={this.changeCity} sevenDaysTemp={this.state.city.sevenDaysTemp}/>
                 </div>
             </div>  
         )

@@ -5,8 +5,8 @@ import OneDay from './OneDay';
 
 const SevenDaysWeather = ({sevenDaysTemp})=>{
     // console.log(sevenDaysTemp)
-    const sevenDaysComponents = sevenDaysTemp.map((day)=>{
-        return <OneDay day={day}/>
+    const sevenDaysComponents = sevenDaysTemp.map((day,i)=>{
+        return <OneDay day={day} key={i}/>
     })
     console.log(sevenDaysComponents)
     return (
