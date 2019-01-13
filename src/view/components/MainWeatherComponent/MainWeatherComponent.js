@@ -6,11 +6,10 @@ import SevenDaysWeather from './SevenDaysWeather/SevenDaysWeather';
 
 
 const MainWeatherComponent = ({sevenDaysTemp})=>{
-    console.log(sevenDaysTemp[0])
     return (
         <div className="home-right">
             <CityComponent/>
-            <SevenDaysWeather/>
+            <SevenDaysWeather sevenDaysTemp={sevenDaysTemp}/>
         </div>
     )
 }

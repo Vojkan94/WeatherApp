@@ -28,7 +28,7 @@ class Home extends Component {
     }
 
     render (){
-        if(!this.state.city) { return null;}
+        if(!this.state.city) { return null; }
         return (
             <div className="flex-container">
                 <div className="wrapper">
