@@ -5,11 +5,10 @@ import CityComponent from './CityComponent/CityComponent';
 import SevenDaysWeather from './SevenDaysWeather/SevenDaysWeather';
 
 
-const MainWeatherComponent = ({sevenDaysTemp, changeCity})=>{
-    console.log(changeCity)
+const MainWeatherComponent = ({sevenDaysTemp, changeCity, cityName})=>{
     return (
         <div className="home-right">
-            <CityComponent changeCity={changeCity}/>
+            <CityComponent cityName={cityName} changeCity={changeCity}/>
             <SevenDaysWeather sevenDaysTemp={sevenDaysTemp}/>
         </div>
     )

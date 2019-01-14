@@ -6,10 +6,9 @@ import sun from '../../assets/icons/sun.svg';
 
 const CurrentWeather = ({city}) =>{
     let {temperature, precipType} = city;
-    console.log(city)
-    // precipType = `${precipType[0].toUpperCase()}${precipType.slice(1)}`;
+    precipType = `${precipType[0].toUpperCase()}${precipType.slice(1)}`;
     precipType = precipType.split(" ");
-    const summary = precipType[1];
+    const summary = precipType.length === 1 ?  precipType[0] : precipType[1];
     return (
         <div className="home-top-left">
             <div className="cw-wrapper clearFix"> 

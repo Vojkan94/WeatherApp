@@ -1,23 +1,50 @@
-import React, {Fragment} from "react";
+import React, {Component,Fragment} from "react";
 import './cityComponent.css';
-import {click} from './clickFunction.js';
+import {selectCity} from './selectCity.js';
+import $ from 'jquery';
 
 
-const CityComponent = ({changeCity}) =>{
-    console.log(changeCity)
-    const date = new Date();
-    const month = date.toLocaleString('en-us', { month: 'long' }).toUpperCase();
-    let day = `${date.getDate()}`;
-    day = day.length === 1 ? `0${day}` : day;
-    return (
-        <Fragment>
-            <span onClick={click} class="dropdown-el">
-                <input type="radio" onClick={changeCity}  name="city" defaultChecked id="beograd"/><label onClick={changeCity} htmlFor="beograd">BEOGRAD</label>
-                <input type="radio" onClick={changeCity}  name="city" id="novisad"/><label onClick={changeCity} htmlFor="novisad">NOVI SAD</label> 
-            </span>
-            <p onClick={changeCity} className="weather-date">{day} {month}</p>
-        </Fragment>
-    )
+class CityComponent extends Component{
+    constructor(props){
+        super(props);
+    }
+    
+    componentDidMount (){
+        selectCity();
+    }
+
+    toogleClass(){
+        if( $('.weather-date').hasClass('weather-date--opacity')){
+            setTimeout(() => {
+                $('.weather-date').removeClass('weather-date--opacity');    
+            }, 300);  
+        }else{
+            $('.weather-date').addClass('weather-date--opacity')
+        }
+    }
+
+    render(){
+        const date = new Date();
+        const month = date.toLocaleString('en-us', { month: 'long' }).toUpperCase();
+        let day = `${date.getDate()}`;
+        day = day.length === 1 ? `0${day}` : day;
+        return(
+        <div class="container">
+          <div onClick={this.toogleClass} class="dropdown">
+            <div class="select">
+              <span >BEOGRAD</span>
+              <i></i>
+            </div>
+            <input type="hidden" name="city"/>
+            <ul class="dropdown-menu">
+              <li onClick={this.props.changeCity}>{this.props.cityName}</li>
+            </ul>
+          </div>
+      
+        <span class="weather-date">{day} {month}</span>
+        </div>
+      )
+    }
 }
 
 export default CityComponent;

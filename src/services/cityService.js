@@ -22,8 +22,7 @@ class CityService{
         const sevenDaysEntities = sortDays.map((day, index)=>{
             return new Day(sortDays[index], sevenDays[index].temperatureHigh, sevenDays[index].precipType);
         })
-        
-        // console.log(sevenDaysEntities)
+    
         return new City(city, temperature, summary, sevenDaysEntities, visibility, uvIndex, humidity, dewPoint);
     }
 }

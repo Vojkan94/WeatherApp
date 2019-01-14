@@ -13,34 +13,49 @@ class Home extends Component {
         super(props);
         this.state = {
             city: null,
-            cityName: "BG"
+            cityName: "NOVI SAD"
         }
-        // this.myfetch = this.myfetch.bind(this);
+        this.changeCity = this.changeCity.bind(this);
 
     }
     componentDidMount(){
-       this.myfetch();
+       this.myfetch("BG");
     }
 
-    async myfetch(){
-        const city = await cityService.fetchWeather("BG");
+    async myfetch(cityName){
+        const city = await cityService.fetchWeather(cityName);
         this.setState({
             city
         })
     }
 
-    changeCity(){
-        console.log("klick")
+    changeCity(event){
+        const selectedCity = event.target.textContent;
+        setTimeout(()=>{
+            if(selectedCity === "NOVI SAD"){
+                this.myfetch("NS");
+                this.setState({
+                    cityName: "BEOGRAD"
+                })
+            }else{
+                this.myfetch("BG");
+                this.setState({
+                    cityName: "NOVI SAD"
+                })
+            }
+        }, 500)
     }
+   
 
     render (){
+       
         if(!this.state.city) { return null; }
         return (
             <div className="flex-container">
                 <div className="wrapper">
                     <CurrentWeather city={this.state.city}/>
                     <CurrentWeatherDetails city={this.state.city}/>
-                    <MainWeatherComponent changeCity={this.changeCity} sevenDaysTemp={this.state.city.sevenDaysTemp}/>
+                    <MainWeatherComponent cityName={this.state.cityName} changeCity={this.changeCity} sevenDaysTemp={this.state.city.sevenDaysTemp}/>
                 </div>
             </div>  
         )
