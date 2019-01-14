@@ -1,5 +1,5 @@
 class City { 
-    constructor(name, temperature, precipType, sevenDaysTemp, visibility, uvIndex, humidity, dewPoint){
+    constructor(name, temperature, precipType, sevenDaysTemp, visibility, uvIndex, humidity, dewPoint,icon){
         this.name = name;
         this.temperature = temperature;
         this.precipType = precipType;
@@ -8,6 +8,7 @@ class City {
         this.uvIndex = uvIndex;
         this.humidity = humidity;
         this.dewPoint = dewPoint;
+        this.icon = icon;
     }
 }
 

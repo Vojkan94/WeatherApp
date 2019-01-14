@@ -1,8 +1,8 @@
 class Day { 
-    constructor(name, temperatureHigh, precipType){
+    constructor(name, temperatureHigh,icon){
         this.name = name;
         this.temperatureHigh = temperatureHigh;
-        this.precipType = precipType;
+        this.icon = icon;
     }
 }
 
