@@ -48,9 +48,21 @@
 }
 .cw-update > p{
     color: rgb(255, 255, 255);
+    font-size: 14px;
     display: inline-block;
     margin-left: 5%;
     position: relative;
     top: -4px;
     font-weight: bold;
+}
+.icon-refresh{
+    width: 10%;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+}
+.icon-refresh--click{
+    transform: rotate(360deg);
+}
+.icon-refresh--click2{
+    transform: rotate(-360deg);
 }

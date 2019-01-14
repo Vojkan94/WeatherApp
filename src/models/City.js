@@ -5,7 +5,7 @@ class City {
         this.precipType = precipType;
         this.sevenDaysTemp = sevenDaysTemp;
         this.visibility = visibility;
-        this. uvIndex = uvIndex;
+        this.uvIndex = uvIndex;
         this.humidity = humidity;
         this.dewPoint = dewPoint;
     }

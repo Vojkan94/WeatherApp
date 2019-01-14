@@ -1,10 +1,14 @@
 import React from "react";
+import TimeAgo from 'react-timeago';
 import './currentWeather.css';
+import {refreshIconAnimation} from './refreshIconAnimation';
+
+import refreshIcon from '../../assets/icons/refresh.svg';
+
 import sun from '../../assets/icons/sun.svg';
 // import Chart from '../chart';
 
-
-const CurrentWeather = ({city}) =>{
+const CurrentWeather = ({city, refresh, timeAgo}) =>{
     let {temperature, precipType} = city;
     precipType = `${precipType[0].toUpperCase()}${precipType.slice(1)}`;
     precipType = precipType.split(" ");
@@ -21,8 +25,8 @@ const CurrentWeather = ({city}) =>{
                 </div>
             </div>
             <div className="cw-update">
-            <img width="10%" src="https://cdn.iconscout.com/icon/free/png-256/refresh-470-474986.png"/>
-            <p>Updated 4 mins ago.</p>
+            <img className="icon-refresh" onClick={()=>{refresh(); refreshIconAnimation();}} src={refreshIcon}/>  
+            <p>Updated <TimeAgo date={timeAgo}/></p>
             </div>
         </div>
     )

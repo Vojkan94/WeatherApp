@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export function selectCity() {
+export const selectCity = () => {
     $('.dropdown').click(function () {
         $(this).toggleClass('active');
         $(this).find('.dropdown-menu').slideToggle(400);
