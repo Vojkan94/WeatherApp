@@ -6,10 +6,11 @@ import SevenDaysWeather from './SevenDaysWeather/SevenDaysWeather';
 
 
 const MainWeatherComponent = ({sevenDaysTemp, changeCity, cityName})=>{
+    const cssClass = cityName === "NOVI SAD" ? "home-right home-right-BG" : "home-right home-right-NS"
     return (
-        <div className="home-right">
+        <div className={cssClass}>
             <CityComponent cityName={cityName} changeCity={changeCity}/>
-            <SevenDaysWeather sevenDaysTemp={sevenDaysTemp}/>
+            <SevenDaysWeather cityName={cityName} sevenDaysTemp={sevenDaysTemp}/>
         </div>
     )
 }

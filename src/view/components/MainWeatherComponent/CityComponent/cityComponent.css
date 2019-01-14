@@ -10,7 +10,6 @@ span.choose {
     margin-left:5%;
 }
 
-/*Styling Selectbox*/
 .dropdown {
     width: 220px;
     display: inline-block;
@@ -36,6 +35,7 @@ span.choose {
     border: 0.3em solid white;
     border-color: white transparent transparent transparent;
     transition: 0.3s all ease-in-out;
+   
 }
 .dropdown.active .select > i {
     transform: rotate(-180deg);
