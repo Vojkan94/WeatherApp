@@ -1,48 +1,18 @@
 import React, {Fragment} from "react";
 import './sevenDaysWeather.css';
-import sun from '../../../assets/icons/sun.svg';
 
+import OneDay from './OneDay';
 
-const SevenDaysWeather = ()=>{
+const SevenDaysWeather = ({sevenDaysTemp, cityName})=>{
+    const sevenDaysComponents = sevenDaysTemp.map((day,i)=>{
+        return <OneDay day={day} key={i} index={i}/>
+    })
+    const cssClass = cityName === "NOVI SAD" ? "seven-days-blur seven-days-blur--BG" : "seven-days-blur seven-days-blur--NS"
     return (
         <Fragment>
-        <div className="seven-days-blur"></div>
+        <div className={cssClass}></div>
         <div className="seven-days-wrapper">
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div><hr/>                
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div><hr/>                
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div><hr/>                
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div><hr/>                
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div><hr/>                
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div><hr/>                
-            <div className="day-wrapper">
-                <div className="zoom-effect">
-                    <img src={sun}/><p>31</p>
-                </div><p className="day-of-week">MON</p>
-            </div>              
+             {sevenDaysComponents}         
         </div>
         </Fragment>
     )

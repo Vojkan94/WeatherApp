@@ -5,11 +5,12 @@ import CityComponent from './CityComponent/CityComponent';
 import SevenDaysWeather from './SevenDaysWeather/SevenDaysWeather';
 
 
-const MainWeatherComponent = ()=>{
+const MainWeatherComponent = ({sevenDaysTemp, changeCity, cityName})=>{
+    const cssClass = cityName === "NOVI SAD" ? "home-right home-right-BG" : "home-right home-right-NS"
     return (
-        <div className="home-right">
-            <CityComponent/>
-            <SevenDaysWeather/>
+        <div className={cssClass}>
+            <CityComponent cityName={cityName} changeCity={changeCity}/>
+            <SevenDaysWeather cityName={cityName} sevenDaysTemp={sevenDaysTemp}/>
         </div>
     )
 }

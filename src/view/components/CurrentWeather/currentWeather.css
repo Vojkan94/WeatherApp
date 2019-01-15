@@ -7,7 +7,7 @@
     
 }
 .p-temperature{
-    font-size: 45px;
+    font-size: 33px;
     color: white;
     margin: 0;
     padding: 0;
@@ -16,8 +16,8 @@
     font-size: 30px;
     position: relative;
     color: white;
-    top: -14px;
-    left: -10px;
+    top: -4px;
+    left: -7px;
    
 }
 .p-temperature-text{
@@ -45,12 +45,33 @@
 .cw-update{
     width: 100%;
     padding: 5% 9.5%;
+    position: absolute;
+    bottom: -10px;
 }
 .cw-update > p{
     color: rgb(255, 255, 255);
+    font-size: 14px;
     display: inline-block;
     margin-left: 5%;
     position: relative;
     top: -4px;
     font-weight: bold;
+}
+.icon-refresh{
+    width: 10%;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+}
+.chart{
+    overflow: hidden;
+    width: 100%;
+    bottom: 34px;
+    left: -6px;
+    position: absolute;
+}
+.for-chart{
+    position: absolute;
+    width: 100%;
+    opacity: 0.4;
+    bottom: -3px;
 }

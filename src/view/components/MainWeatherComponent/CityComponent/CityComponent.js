@@ -1,18 +1,46 @@
-import React, {Fragment} from "react";
+import React, {Component} from "react";
 import './cityComponent.css';
-import {click} from './clickFunction.js';
+import {selectCity} from './selectCity.js';
+import $ from 'jquery';
 
+class CityComponent extends Component{
+    
+    componentDidMount (){
+        selectCity();
+    }
 
-const CityComponent = () =>{
-    return (
-        <Fragment>
-            <span onClick={click} class="dropdown-el">
-                <input type="radio" name="city" defaultChecked id="beograd"/><label htmlFor="beograd">BEOGRAD</label>
-                <input type="radio" name="city" id="novisad"/><label htmlFor="novisad">NOVI SAD</label> 
-            </span>
-            <p className="weather-date">9 AUGUST</p>
-        </Fragment>
-    )
+    toogleClass(){
+        if($('.weather-date').hasClass('weather-date--opacity')){
+            setTimeout(() => {
+                $('.weather-date').removeClass('weather-date--opacity');    
+            }, 300);  
+        }else{
+            $('.weather-date').addClass('weather-date--opacity');
+        }
+    }
+
+    render(){
+        const date = new Date();
+        const month = date.toLocaleString('en-us', { month: 'long' }).toUpperCase();
+        let day = `${date.getDate()}`;
+        day = day.length === 1 ? `0${day}` : day;
+        return(
+        <div className="container">
+          <div onClick={this.toogleClass} className="dropdown">
+            <div className="select">
+              <span>BEOGRAD</span>
+              <i></i>
+            </div>
+            <input type="hidden" name="city"/>
+            <ul className="dropdown-menu">
+              <li onClick={this.props.changeCity}>{this.props.cityName}</li>
+            </ul>
+          </div>
+      
+        <span className="weather-date">{day} {month}</span>
+        </div>
+      )
+    }
 }
 
 export default CityComponent;

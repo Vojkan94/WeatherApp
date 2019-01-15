@@ -1,76 +1,79 @@
-.dropdown-el {
-    width: 62%;
-    position: relative;
+span.msg,
+span.choose {
+    color: #555;
+    padding: 5px 0 10px;
+    display: inherit
+}
+.container {
+    width: 220px;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.dropdown {
+    width: 220px;
     display: inline-block;
-    min-height: 2em;
-    max-height: 2em;
-    overflow: hidden;
-    top: 0.5em;
-    cursor: pointer;
-    white-space: nowrap;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    font-size: 35px;
+    font-weight: 1000;
     color: white;
-    outline: none;
-    border: 0.06em solid transparent;
-    border-radius: 1em;
-    transition: 0.3s all ease-in-out;
-    font-size: 30px;
-    font-weight: bold;
+    height: 100%;
     -webkit-text-stroke: 1px black;
+
 }
-.dropdown-el input {
-    display: none;
-}
-.dropdown-el label {
-    display: block;
-    height: 2em;
-    line-height: 2em;
-    padding-left: 1em;
-    padding-right: 3em;
+.dropdown .select {
     cursor: pointer;
-    position: relative;
-    transition: 0.3s color ease-in-out;
-}
-.dropdown-el label:nth-child(2) {
-    margin-top: 2em;
-}
-.dropdown-el input:checked + label {
     display: block;
-    border-top: none;
-    position: absolute;
-    top: 0;
+    padding: 5px;
 }
-.dropdown-el input:checked + label:nth-child(2) {
-    margin-top: 0;
-    position: relative;
-}
-.dropdown-el::after {
+.dropdown .select > i {
     content: "";
     position: absolute;
-    right: 0.8em;
-    top: 0.9em;
+    right: -10px;
+    top: 27px;
     border: 0.3em solid white;
     border-color: white transparent transparent transparent;
-    transition: 0.4s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+   
 }
-.dropdown-el.expanded {
-    padding: 0;
-    box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 6px 0px;
-    max-height: 15em;
-}
-.dropdown-el.expanded label:hover {
-    color: #3694d7;
-}
-.dropdown-el.expanded::after {
+.dropdown.active .select > i {
     transform: rotate(-180deg);
-    top: 0.55em;
+    top: 15px;
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    width: 100%;  
+    left: 0;
+    margin-top: 1px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9;
+}
+.dropdown .dropdown-menu li {
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none;
+}
+.dropdown .dropdown-menu li:hover {
+    color:  rgb(129, 179, 217);
+}
+.dropdown .dropdown-menu li:active {
+    color:  rgb(129, 179, 217);
 }
 .weather-date{
     color: white;
-    margin-left: 9%;
+    margin-left: 3%;
     font-size: 20px;
     font-weight: bold;
     -webkit-text-stroke: 1px black;
 }
 .weather-date--opacity{
-    opacity: 0;
+   display: none;
 }

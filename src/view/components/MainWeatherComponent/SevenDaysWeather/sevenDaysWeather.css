@@ -3,12 +3,18 @@
     position: absolute;
     right: 1px;
     bottom: 0;
-    background-image: url('../../../assets/images/bg.jpg');
     filter: blur(2px);
     background-position: 0% 100%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 130px;
+    transition: all 0.4s ease-in-out;
+}
+.seven-days-blur--BG{
+    background-image: url('../../../assets/images/bg.jpg');
+}
+.seven-days-blur--NS{
+    background-image: url('../../../assets/images/ns.jpg');
 }
 
 .seven-days-wrapper{
@@ -19,14 +25,13 @@
     max-height: 130px;
 }
 .zoom-effect{
-    
     text-align: center;
     display: inline-block;
     width: 100%;
     color: white;
     height: 80%;
-    transition: all .1s linear;
-    filter: brightness(85%);
+    transition: all .1s ease-in-out;
+    filter: brightness(80%);
 }
 .zoom-effect:hover{
     transform: scale(1.2); 
@@ -56,10 +61,15 @@
     font-size: 15px;
     font-weight: bold;
 }
+.zoom-effect span {
+    position: relative;
+    right: 3px;
+}
 .day-of-week{
     font-size: 10px;
     color: white;
-    filter: brightness(80%);
+    font-weight: bold;
+    filter: brightness(100%);
     text-align: center;
     position: relative;
     top: 15px;
