@@ -7,6 +7,7 @@ import refreshIcon from '../../assets/icons/refresh.svg';
 import getImage from '../ImagesForIcons/ImagesForIcons';
 
 import Chart from '../chart';
+// import '../chart.css';
 
 const CurrentWeather = ({city, refresh, timeAgo}) =>{
     let {temperature, precipType, icon} = city;
@@ -16,6 +17,7 @@ const CurrentWeather = ({city, refresh, timeAgo}) =>{
     const summary = precipType.length === 1 ?  precipType[0] : precipType[1];
     return (
         <div className="home-top-left">
+    
             <div className="cw-wrapper clearFix"> 
                 <div className="current-temperature">
                     <p className="p-temperature">{temperature} <span>&deg;</span></p>
@@ -28,8 +30,8 @@ const CurrentWeather = ({city, refresh, timeAgo}) =>{
             <div className="cw-update">
             <img className="icon-refresh" onClick={()=>{refresh(); refreshIconAnimation();}} src={refreshIcon}  alt="icon-refresh"/>  
             <p>Updated <TimeAgo date={timeAgo}/></p>
-            <div className="chart"><Chart/></div>
             </div>
+            <div className="chart"><Chart/></div>
         </div>
     )
 }

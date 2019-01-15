@@ -1,0 +1,16 @@
+.line {
+    stroke-dasharray: 475;
+    stroke-dashoffset: 475;
+    animation: dash  4s ease-out forwards;
+  }
+  
+  @keyframes dash  {
+    from {
+      stroke-dashoffset: 475;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
