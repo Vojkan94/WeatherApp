@@ -1,10 +1,10 @@
-import cloud from '../../assets/icons/cloud.svg';
 import cloudy from '../../assets/icons/cloudy.svg';
 import clearNight from '../../assets/icons/moon.svg';
 import rain from '../../assets/icons/rain.svg';
 import snow from '../../assets/icons/snowing.svg';
-import storn from '../../assets/icons/storn.svg';
 import sun from '../../assets/icons/sun.svg';
+// import cloud from '../../assets/icons/cloud.svg';
+// import storn from '../../assets/icons/storn.svg';
 
 
 const getImage = (icon) => {

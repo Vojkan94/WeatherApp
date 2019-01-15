@@ -27,7 +27,6 @@ class Home extends Component {
     async myfetch(cityName){
         const city = await cityService.fetchWeather(cityName);
         const timeAgo = new Date();
-        console.log(city)
         this.setState({
             city,
             timeAgo

@@ -10,7 +10,7 @@ const OneDay = ({day, index})=>{
                 <div className="zoom-effect">
                     <img src={tempIcon} alt="icon"/><p>{temperatureHigh} <span>&deg;</span></p>
                 </div><p className="day-of-week">{name}</p>
-        </div>{index == 6 ? null : <hr/> } 
+        </div>{index === 6 ? null : <hr/> } 
         
         </Fragment>
     )

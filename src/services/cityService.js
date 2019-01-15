@@ -15,7 +15,7 @@ class CityService{
         const nameOfDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
         const currentDay = nameOfDays[new Date().getDay()];
         let sortDays = [];
-        console.log(responseObj)
+        
         for(let i = 0, indexOfDay = nameOfDays.indexOf(currentDay) ; i < 7; i++, indexOfDay++ ){
             sortDays.push(nameOfDays[indexOfDay])
             indexOfDay = indexOfDay === 6 ? -1 : indexOfDay;
@@ -23,7 +23,7 @@ class CityService{
         const sevenDaysEntities = sortDays.map((day, index)=>{
             return new Day(sortDays[index], sevenDays[index].temperatureHigh, sevenDays[index].icon);
         })
-        console.log(sevenDaysEntities)
+      
         return new City(city, temperature, summary, sevenDaysEntities, visibility, uvIndex, humidity, dewPoint,icon);
     }
 }
