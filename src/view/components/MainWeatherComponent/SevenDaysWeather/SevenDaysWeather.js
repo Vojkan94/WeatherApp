@@ -5,7 +5,7 @@ import OneDay from './OneDay';
 
 const SevenDaysWeather = ({sevenDaysTemp, cityName})=>{
     const sevenDaysComponents = sevenDaysTemp.map((day,i)=>{
-        return <OneDay day={day} key={i}/>
+        return <OneDay day={day} key={i} index={i}/>
     })
     const cssClass = cityName === "NOVI SAD" ? "seven-days-blur seven-days-blur--BG" : "seven-days-blur seven-days-blur--NS"
     return (

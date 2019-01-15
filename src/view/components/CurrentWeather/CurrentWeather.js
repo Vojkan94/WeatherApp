@@ -6,7 +6,7 @@ import { refreshIconAnimation } from './refreshIconAnimation';
 import refreshIcon from '../../assets/icons/refresh.svg';
 import getImage from '../ImagesForIcons/ImagesForIcons';
 
-// import Chart from '../chart';
+import Chart from '../chart';
 
 const CurrentWeather = ({city, refresh, timeAgo}) =>{
     let {temperature, precipType, icon} = city;
@@ -28,6 +28,7 @@ const CurrentWeather = ({city, refresh, timeAgo}) =>{
             <div className="cw-update">
             <img className="icon-refresh" onClick={()=>{refresh(); refreshIconAnimation();}} src={refreshIcon}  alt="icon-refresh"/>  
             <p>Updated <TimeAgo date={timeAgo}/></p>
+            <div className="chart"><Chart/></div>
             </div>
         </div>
     )

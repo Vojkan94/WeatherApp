@@ -61,6 +61,10 @@
     font-size: 15px;
     font-weight: bold;
 }
+.zoom-effect span {
+    position: relative;
+    right: 3px;
+}
 .day-of-week{
     font-size: 10px;
     color: white;
