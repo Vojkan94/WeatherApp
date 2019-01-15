@@ -3,13 +3,14 @@ import $ from 'jquery';
 export const refreshIconAnimation = () => {
 
     let rotate = $('.icon-refresh').attr('style');
-    if(rotate != undefined){
-
+    console.log(rotate)
+    console.log("ej")
+    if(rotate !== undefined){
         rotate = rotate.split('(');
-        rotate = rotate[rotate.length-1].split(")");
+        console.log(rotate);
+        rotate = rotate[1].split(")"); //to dot slice
         rotate = rotate[0].split('deg');
         rotate = rotate[0]*1 + 360;
-        console.log(rotate)
         $('.icon-refresh').css({
             'transform': `rotate(${rotate}deg)`
         })

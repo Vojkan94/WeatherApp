@@ -4,14 +4,13 @@ import './currentWeather.css';
 
 import { refreshIconAnimation } from './refreshIconAnimation';
 import refreshIcon from '../../assets/icons/refresh.svg';
-import * as images from '../ImagesForIcons/ImagesForIcons';
+import getImage from '../ImagesForIcons/ImagesForIcons';
 
 // import Chart from '../chart';
 
 const CurrentWeather = ({city, refresh, timeAgo}) =>{
     let {temperature, precipType, icon} = city;
-    console.log(icon)
-    icon = images.getImage(icon);
+    icon = getImage(icon);
     precipType = `${precipType[0].toUpperCase()}${precipType.slice(1)}`;
     precipType = precipType.split(" ");
     const summary = precipType.length === 1 ?  precipType[0] : precipType[1];
@@ -23,11 +22,11 @@ const CurrentWeather = ({city, refresh, timeAgo}) =>{
                     <p className="p-temperature-text">{summary}</p>
                 </div>
                 <div className="current-icone">
-                    <img src={icon}/>
+                    <img src={icon} alt="icon"/>
                 </div>
             </div>
             <div className="cw-update">
-            <img className="icon-refresh" onClick={()=>{refresh(); refreshIconAnimation();}} src={refreshIcon}/>  
+            <img className="icon-refresh" onClick={()=>{refresh(); refreshIconAnimation();}} src={refreshIcon}  alt="icon-refresh"/>  
             <p>Updated <TimeAgo date={timeAgo}/></p>
             </div>
         </div>
