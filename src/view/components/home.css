@@ -17,6 +17,7 @@
     
 }
 .home-top-left{
+    position: relative;
     background-image: url('../assets/images/top-left.jpg');
     background-position: center;
     background-size: cover;

@@ -1,7 +1,7 @@
 .line {
     stroke-dasharray: 475;
     stroke-dashoffset: 475;
-    animation: dash  4s ease-out forwards;
+    animation: dash  1.5s ease-out forwards;
   }
   
   @keyframes dash  {
