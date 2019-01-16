@@ -5,7 +5,7 @@ A web application that is able to show a current and a weekly weather forecast f
 You can choose between the two cities and refresh the current city.
 There are some SVG and jQuery animations.
  
-DEMO : [BITBOOK](http://weather-app.vojkantrojanovic.com)
+DEMO : [Weather-App](http://weather-app.vojkantrojanovic.com)
 
 # Showcasing 
 
