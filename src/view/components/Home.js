@@ -6,7 +6,6 @@ import CurrentWeatherDetails from './CurrentWeatherDetails/CurrentWeatherDetails
 import MainWeatherComponent from './MainWeatherComponent/MainWeatherComponent';
 
 import { cityService } from '../../services/cityService';
-import nesto from '../assets/images/nesto.png';
 
 class Home extends Component {
     constructor(){
