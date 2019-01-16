@@ -4,7 +4,6 @@
     width: 800px;
     height: 600px;
     background-color: #DBEDF7;
-    
 }
 .wrapper{
     width: 635px;
@@ -14,7 +13,6 @@
     flex-flow: column wrap;
     height: 350px;
     justify-content: space-evenly;
-    
 }
 .home-top-left{
     position: relative;

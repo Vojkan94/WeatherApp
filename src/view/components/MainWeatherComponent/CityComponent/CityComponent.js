@@ -13,7 +13,7 @@ class CityComponent extends Component{
         if($('.weather-date').hasClass('weather-date--opacity')){
             setTimeout(() => {
                 $('.weather-date').removeClass('weather-date--opacity');    
-            }, 300);  
+            }, 350);  
         }else{
             $('.weather-date').addClass('weather-date--opacity');
         }
